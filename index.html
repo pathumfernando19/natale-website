@@ -12,21 +12,24 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #ffffff;
+            background-color: #000000;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
         }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.95), rgba(80, 0, 0, 0.95));
-            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 1.2rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #8B0000;
+            backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .nav-container {
@@ -39,11 +42,18 @@
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #FFD700;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffffff;
             text-decoration: none;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: none;
+            letter-spacing: -0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #666666;
+            transform: scale(1.05);
         }
 
         .nav-links {
@@ -53,13 +63,18 @@
         }
 
         .nav-links a {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
         }
 
         .nav-links a:hover {
-            color: #FFD700;
+            color: #666666;
+            background: rgba(102, 102, 102, 0.1);
+            transform: translateY(-1px);
         }
 
         /* Hero Slider */
@@ -90,25 +105,25 @@
         }
 
         .slide1 {
-    background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-                url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-1.jpg');
-    background-size: cover;
-    background-position: center;
-}
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 107, 107, 0.2)), 
+                        url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-.slide2 {
-    background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-                url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-2.jpg');
-    background-size: cover;
-    background-position: center;
-}
+        .slide2 {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(74, 144, 226, 0.2)), 
+                        url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-.slide3 {
-    background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-                url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-3.jpg');
-    background-size: cover;
-    background-position: center;
-}
+        .slide3 {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 193, 7, 0.2)), 
+                        url('https://raw.githubusercontent.com/pathumfernando19/natale-website/main/images/hero-slide-3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
         .hero-content {
             text-align: center;
@@ -151,11 +166,85 @@
             box-shadow: 0 10px 25px rgba(139, 0, 0, 0.5);
         }
 
+        /* Introduction Section */
+        .introduction-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: #ffffff;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .intro-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intro-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .intro-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #666666, #888888);
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .intro-main {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .intro-details {
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .intro-audience {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
         /* Artists Section */
         .artists-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #fff;
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .artists-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 102, 102, 0.3), transparent);
         }
 
         .container {
@@ -164,94 +253,207 @@
             padding: 0 2rem;
         }
 
+        /* Professional spacing utilities */
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-5 { margin-bottom: 3rem; }
+
+        /* Enhanced typography */
+        .text-muted {
+            color: #6c757d;
+            font-weight: 400;
+        }
+
+        .text-primary {
+            color: #3498db;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: -1px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #666666, #888888);
+            border-radius: 2px;
         }
 
         .artists-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
             margin-bottom: 5rem;
+            justify-content: center;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .artist-card {
-            background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            border: 2px solid #8B0000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
         }
 
         .artist-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(139, 0, 0, 0.3);
-            border-color: #DC143C;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 102, 102, 0.2);
+            border-color: #666666;
+            background: rgba(255, 255, 255, 0.08);
         }
 
         .artist-image {
-            height: 200px;
-            background: linear-gradient(45deg, #8B0000, #DC143C);
+            height: 280px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Style for all artist images (singers and bands) */
+        .artist-image[style*="background-image"] {
+            font-size: 0;
+            aspect-ratio: 1 / 1;
+            height: auto;
+            width: 100%;
+        }
+
+        .artist-image[style*="background-image"]::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+            z-index: 1;
+        }
+
+        .artist-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 102, 102, 0.8), rgba(136, 136, 136, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .artist-card:hover .artist-image::before {
+            opacity: 1;
         }
 
         .artist-info {
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
         }
 
         .artist-name {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #FFD700;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 0.3rem;
         }
 
         /* Event Dates Section */
         .dates-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+            padding: 120px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
             color: white;
+            position: relative;
+        }
+
+        .dates-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.3), transparent);
         }
 
         .dates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            max-width: 1600px;
+            margin: 0 auto;
         }
 
         .date-card {
-            background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(30px);
+            border-radius: 24px;
+            padding: 2.5rem;
             text-align: center;
-            border: 2px solid #8B0000;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .date-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .date-card:hover::before {
+            left: 100%;
         }
 
         .date-card:hover {
-            background: rgba(139, 0, 0, 0.2);
-            transform: translateY(-5px);
-            border-color: #DC143C;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px) scale(1.02);
+            border-color: #4a90e2;
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.2);
         }
 
         .date-number {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #4a90e2;
+            text-shadow: none;
+            background: linear-gradient(135deg, #4a90e2, #6ba3e8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .date-info h3 {
@@ -263,13 +465,101 @@
             opacity: 0.8;
         }
 
+        /* Main Organizers Section */
+        .organizers-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #ffffff;
+            position: relative;
+        }
+
+        .organizers-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(102, 102, 102, 0.3), transparent);
+        }
+
+        .organizers-grid {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .organizer-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-width: 350px;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .organizer-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 102, 102, 0.2);
+            border-color: #666666;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .organizer-logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .organizer-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .organizer-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .organizer-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
         /* Footer */
         .footer {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
-            border-top: 3px solid #8B0000;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #666666, transparent);
         }
 
         .footer-content {
@@ -292,7 +582,7 @@
         }
 
         .footer-links a:hover {
-            color: #FFD700;
+            color: #666666;
         }
 
         .social-icons {
@@ -303,31 +593,49 @@
         }
 
         .social-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, #8B0000, #DC143C);
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #666666, #888888);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
-            border: 2px solid #FFD700;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #888888, #666666);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icon:hover::before {
+            opacity: 1;
         }
 
         .social-icon:hover {
-            background: linear-gradient(45deg, #DC143C, #8B0000);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.5);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(102, 102, 102, 0.4);
+            border-color: #666666;
         }
 
-        /* Animations */
+        /* Professional Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -335,7 +643,76 @@
             }
         }
 
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Staggered animations for cards */
+        .artist-card:nth-child(1) { animation: fadeInUp 0.6s ease 0.1s both; }
+        .artist-card:nth-child(2) { animation: fadeInUp 0.6s ease 0.2s both; }
+        .artist-card:nth-child(3) { animation: fadeInUp 0.6s ease 0.3s both; }
+        .artist-card:nth-child(4) { animation: fadeInUp 0.6s ease 0.4s both; }
+        .artist-card:nth-child(5) { animation: fadeInUp 0.6s ease 0.5s both; }
+        .artist-card:nth-child(6) { animation: fadeInUp 0.6s ease 0.6s both; }
+
+        .date-card:nth-child(1) { animation: slideInLeft 0.6s ease 0.1s both; }
+        .date-card:nth-child(2) { animation: slideInLeft 0.6s ease 0.2s both; }
+        .date-card:nth-child(3) { animation: slideInLeft 0.6s ease 0.3s both; }
+        .date-card:nth-child(4) { animation: slideInRight 0.6s ease 0.4s both; }
+        .date-card:nth-child(5) { animation: slideInRight 0.6s ease 0.5s both; }
+
         /* Responsive */
+        @media (max-width: 1600px) {
+            .artists-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 1400px;
+            }
+            
+            .dates-grid {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 1400px;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .artists-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1100px;
+            }
+            
+            .dates-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1100px;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2.5rem;
@@ -353,8 +730,55 @@
                 font-size: 2rem;
             }
 
+            .intro-title {
+                font-size: 2.2rem;
+            }
+
+            .intro-text {
+                font-size: 1.1rem;
+            }
+
+            .intro-main {
+                font-size: 1.2rem;
+            }
+
+            .artists-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
+                gap: 1.5rem;
+            }
+
+            .dates-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
+                gap: 1.5rem;
+            }
+
+            .organizers-grid {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .organizer-card {
+                min-width: auto;
+            }
+
             .footer-links {
                 flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artists-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                gap: 1rem;
+            }
+            
+            .dates-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
                 gap: 1rem;
             }
         }
@@ -378,25 +802,21 @@
 
     <!-- Hero Slider -->
     <section class="hero-slider" id="home">
-        <div class="slide slide1 active">
-            <div class="hero-content">
-                <h1>NATALE 2025</h1>
-                <p>Educational and Commercial Exhibition and Carnival</p>
-                <a href="#artists" class="cta-button">Discover Artists</a>
-            </div>
-        </div>
-        <div class="slide slide2">
-            <div class="hero-content">
-                <h1>Five Days of Musical Excellence</h1>
-                <p>At St. Sebastian's College, Katuneriya</p>
-                <a href="#dates" class="cta-button">View Schedule</a>
-            </div>
-        </div>
-        <div class="slide slide3">
-            <div class="hero-content">
-                <h1>Join the Educational Musical Journey</h1>
-                <p>Where Learning Meets Entertainment</p>
-                <a href="#contact" class="cta-button">Get Tickets</a>
+        <div class="slide slide1 active"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="intro-title">About NATALE 2025</h2>
+                <div class="intro-text">
+                    <p class="intro-main">NATALE 2025, organized by St. Sebastian's Central College, Katuneriya, will be held from 19th to 23rd December 2025 at the college grounds.</p>
+                    <p class="intro-details">This five-day celebration will feature an educational and commercial exhibition, food stalls, games, art displays, and daily grand musical shows with leading Sri Lankan bands including Wayo, Yaka Crew, Sanidapa, Flashback, and Avetar.</p>
+                    <p class="intro-audience">With an expected audience of over 125,000 students, families, and community members, Natale 2025 is set to be a vibrant celebration of Christmas values, culture, creativity, and community spirit.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -407,115 +827,99 @@
             <h2 class="section-title">Featured Artists</h2>
             
             <!-- Singers -->
-            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #666;">Featured Artists</h3>
+            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #666666;">Featured Artists</h3>
             <div class="artists-grid">
                 <div class="artist-card">
-                    <div class="artist-image">🎤</div>
+                    <div class="artist-image" style="background-image: url('Artists/Shihan Mihiranga.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Shehan Mihiranga</div>
+                        <div class="artist-name">Shihan Mihiranga</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎵</div>
+                    <div class="artist-image" style="background-image: url('Artists/JAYASRI.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Jaya Shri</div>
+                        <div class="artist-name">JAYASRI</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🌟</div>
+                    <div class="artist-image" style="background-image: url('Artists/Sangeeth Wijesuriya.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Sangeeth Wijesooriya</div>
+                        <div class="artist-name">Sangeeth Wijesuriya</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎤</div>
+                    <div class="artist-image" style="background-image: url('Artists/Senanayaka Weraliyadda.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Senanayeka Weraliyadda</div>
+                        <div class="artist-name">Senanayaka Weraliyadda</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎵</div>
+                    <div class="artist-image" style="background-image: url('Artists/Bathiya and Santhush.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Sanjeewa Lonliyess</div>
+                        <div class="artist-name">Bathiya and Santhush</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🌟</div>
+                    <div class="artist-image" style="background-image: url('Artists/Raini Charuka.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Rayani Gunathileka</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- More Artists -->
-            <div class="artists-grid">
-                <div class="artist-card">
-                    <div class="artist-image">🎤</div>
-                    <div class="artist-info">
-                        <div class="artist-name">Bathiya & Santhush</div>
+                        <div class="artist-name">Raini Charuka</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎵</div>
+                    <div class="artist-image" style="background-image: url('Artists/KHANNA.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Khanna</div>
+                        <div class="artist-name">KHANNA</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🌟</div>
+                    <div class="artist-image" style="background-image: url('Artists/Chanuka Mora.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">Chanuka Mora</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎤</div>
+                    <div class="artist-image" style="background-image: url('Artists/AMELIA WIJESOORIYA.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
-                        <div class="artist-name">Ameliya</div>
+                        <div class="artist-name">AMELIA WIJESOORIYA</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎵</div>
+                    <div class="artist-image" style="background-image: url('Artists/Shan Putha.JPG'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">Shan Putha</div>
-                    </div>
-                </div>
-                <div class="artist-card">
-                    <div class="artist-image">🌟</div>
-                    <div class="artist-info">
-                        <div class="artist-name">Roshan Fernando</div>
                     </div>
                 </div>
             </div>
 
             <!-- Bands -->
-            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; margin-top: 4rem; color: #FFD700;">Featured Bands</h3>
+            <h3 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; margin-top: 4rem; color: #666666;">Featured Bands</h3>
             <div class="artists-grid">
                 <div class="artist-card">
-                    <div class="artist-image">🎸</div>
+                    <div class="artist-image" style="background-image: url('images/bands/WAYO.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">WAYO</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎺</div>
+                    <div class="artist-image" style="background-image: url('images/bands/SANIDAPA.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">SANIDAPA</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎹</div>
+                    <div class="artist-image" style="background-image: url('images/bands/YAKA-CREW.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">YAKA CREW</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎤</div>
+                    <div class="artist-image" style="background-image: url('images/bands/AVATAR.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">AVATAR</div>
                     </div>
                 </div>
                 <div class="artist-card">
-                    <div class="artist-image">🎵</div>
+                    <div class="artist-image" style="background-image: url('images/bands/FLASHBACK.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="artist-info">
                         <div class="artist-name">FLASHBACK</div>
                     </div>
@@ -534,8 +938,8 @@
                     <div class="date-info">
                         <h3>Day 1 - WAYO</h3>
                         <p>December 19, 2025</p>
-                        <p>Shehan Mihiranga, Jaya Shri</p>
-                        <p>Sangeeth Wijesooriya</p>
+                        <p>Shihan Mihiranga, JAYASRI</p>
+                        <p>Sangeeth Wijesuriya</p>
                     </div>
                 </div>
                 <div class="date-card">
@@ -543,8 +947,8 @@
                     <div class="date-info">
                         <h3>Day 2 - SANIDAPA</h3>
                         <p>December 20, 2025</p>
-                        <p>Senanayeka Weraliyadda</p>
-                        <p>Sanjeewa, Rayani</p>
+                        <p>Senanayaka Weraliyadda</p>
+                        <p>Bathiya and Santhush, Raini Charuka</p>
                     </div>
                 </div>
                 <div class="date-card">
@@ -552,8 +956,8 @@
                     <div class="date-info">
                         <h3>Day 3 - YAKA CREW</h3>
                         <p>December 21, 2025</p>
-                        <p>Bathiya & Santhush</p>
-                        <p>Khanna, Chanuka, Dilo</p>
+                        <p>KHANNA, Chanuka Mora</p>
+                        <p>AMELIA WIJESOORIYA</p>
                     </div>
                 </div>
                 <div class="date-card">
@@ -561,8 +965,8 @@
                     <div class="date-info">
                         <h3>Day 4 - AVATAR</h3>
                         <p>December 22, 2025</p>
-                        <p>Ameliya, Shan Putha</p>
-                        <p>Centigradz</p>
+                        <p>Shan Putha</p>
+                        <p>Featured Artists</p>
                     </div>
                 </div>
                 <div class="date-card">
@@ -570,8 +974,35 @@
                     <div class="date-info">
                         <h3>Day 5 - FLASHBACK</h3>
                         <p>December 23, 2025</p>
-                        <p>Roshan Fernando, Chamara</p>
-                        <p>Hanna Shafa, Kingsley</p>
+                        <p>Featured Artists</p>
+                        <p>Special Performances</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Organizers Section -->
+    <section class="organizers-section">
+        <div class="container">
+            <h2 class="section-title">Main Organizers</h2>
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <div class="organizer-logo">
+                        <img src="Main_Organizers/St.-Sebastian's-Central-College,-Katuneriya.jpg" alt="St. Sebastian's Central College Logo">
+                    </div>
+                    <div class="organizer-info">
+                        <h3>Main Organizer</h3>
+                        <p>St. Sebastian's Central College, Katuneriya</p>
+                    </div>
+                </div>
+                <div class="organizer-card">
+                    <div class="organizer-logo">
+                        <img src="Main_Organizers/St.-John-Paul-II-Network-of-Education.jpg" alt="St. John Paul II Network of Education Logo">
+                    </div>
+                    <div class="organizer-info">
+                        <h3>Co-Organizer</h3>
+                        <p>St. John Paul II Network of Education</p>
                     </div>
                 </div>
             </div>
@@ -585,8 +1016,6 @@
                 <a href="#home">Home</a>
                 <a href="#artists">Artists</a>
                 <a href="#dates">Dates</a>
-                <a href="#tickets">Tickets</a>
-                <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="social-icons">
@@ -596,7 +1025,8 @@
                 <a href="#" class="social-icon">y</a>
             </div>
             <p>&copy; 2025 NATALE - Educational and Commercial Exhibition and Carnival. All rights reserved.</p>
-            <p>St. Sebastian's College, Katuneriya | Contact: info@natale2025.com | +94 (11) 123-4567</p>
+            <p>St. Sebastian's College, Katuneriya | Contact: info@natale.lk</p>
+            <p>Rev. Fr. Viraj Eranga Rodrigo | virajera@gmail.com | 0772344612</p>
         </div>
     </footer>
 
@@ -637,9 +1067,9 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
-                header.style.background = 'linear-gradient(135deg, rgba(139, 0, 0, 0.98), rgba(80, 0, 0, 0.98))';
+                header.style.background = 'rgba(0, 0, 0, 0.98)';
             } else {
-                header.style.background = 'linear-gradient(135deg, rgba(139, 0, 0, 0.95), rgba(80, 0, 0, 0.95))';
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
             }
         });
     </script>
